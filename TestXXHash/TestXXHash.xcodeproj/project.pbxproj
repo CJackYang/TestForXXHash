@@ -14,6 +14,10 @@
 		C1133C141D6D521800D6370F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1133C131D6D521800D6370F /* Assets.xcassets */; };
 		C1133C171D6D521800D6370F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1133C151D6D521800D6370F /* LaunchScreen.storyboard */; };
 		C1133C201D6D53B500D6370F /* xxhash.c in Sources */ = {isa = PBXBuildFile; fileRef = C1133C1E1D6D53B500D6370F /* xxhash.c */; };
+		C15C9B2D1D75590100CD8225 /* iblt.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C15C9B261D75590100CD8225 /* iblt.cpp */; };
+		C15C9B2E1D75590100CD8225 /* murmurhash3.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C15C9B281D75590100CD8225 /* murmurhash3.cpp */; };
+		C15C9B2F1D75590100CD8225 /* utilstrencodings.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C15C9B2A1D75590100CD8225 /* utilstrencodings.cpp */; };
+		C15C9B871D7588E400CD8225 /* FMIblt.m in Sources */ = {isa = PBXBuildFile; fileRef = C15C9B861D7588E400CD8225 /* FMIblt.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +33,14 @@
 		C1133C181D6D521800D6370F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C1133C1E1D6D53B500D6370F /* xxhash.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = xxhash.c; sourceTree = "<group>"; };
 		C1133C1F1D6D53B500D6370F /* xxhash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xxhash.h; sourceTree = "<group>"; };
+		C15C9B261D75590100CD8225 /* iblt.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = iblt.cpp; sourceTree = "<group>"; };
+		C15C9B271D75590100CD8225 /* iblt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iblt.h; sourceTree = "<group>"; };
+		C15C9B281D75590100CD8225 /* murmurhash3.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = murmurhash3.cpp; sourceTree = "<group>"; };
+		C15C9B291D75590100CD8225 /* murmurhash3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = murmurhash3.h; sourceTree = "<group>"; };
+		C15C9B2A1D75590100CD8225 /* utilstrencodings.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = utilstrencodings.cpp; sourceTree = "<group>"; };
+		C15C9B2B1D75590100CD8225 /* utilstrencodings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = utilstrencodings.h; sourceTree = "<group>"; };
+		C15C9B851D7588E400CD8225 /* FMIblt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMIblt.h; sourceTree = "<group>"; };
+		C15C9B861D7588E400CD8225 /* FMIblt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMIblt.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +73,8 @@
 		C1133C061D6D521800D6370F /* TestXXHash */ = {
 			isa = PBXGroup;
 			children = (
+				C15C9B301D7566D600CD8225 /* IBLT */,
+				C15C9B241D7558E700CD8225 /* Cplus */,
 				C1133C1E1D6D53B500D6370F /* xxhash.c */,
 				C1133C1F1D6D53B500D6370F /* xxhash.h */,
 				C1133C0A1D6D521800D6370F /* AppDelegate.h */,
@@ -82,6 +96,28 @@
 				C1133C081D6D521800D6370F /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C15C9B241D7558E700CD8225 /* Cplus */ = {
+			isa = PBXGroup;
+			children = (
+				C15C9B261D75590100CD8225 /* iblt.cpp */,
+				C15C9B271D75590100CD8225 /* iblt.h */,
+				C15C9B281D75590100CD8225 /* murmurhash3.cpp */,
+				C15C9B291D75590100CD8225 /* murmurhash3.h */,
+				C15C9B2A1D75590100CD8225 /* utilstrencodings.cpp */,
+				C15C9B2B1D75590100CD8225 /* utilstrencodings.h */,
+			);
+			name = Cplus;
+			sourceTree = "<group>";
+		};
+		C15C9B301D7566D600CD8225 /* IBLT */ = {
+			isa = PBXGroup;
+			children = (
+				C15C9B851D7588E400CD8225 /* FMIblt.h */,
+				C15C9B861D7588E400CD8225 /* FMIblt.m */,
+			);
+			name = IBLT;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -155,8 +191,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				C1133C0F1D6D521800D6370F /* ViewController.m in Sources */,
+				C15C9B2D1D75590100CD8225 /* iblt.cpp in Sources */,
 				C1133C201D6D53B500D6370F /* xxhash.c in Sources */,
 				C1133C0C1D6D521800D6370F /* AppDelegate.m in Sources */,
+				C15C9B2E1D75590100CD8225 /* murmurhash3.cpp in Sources */,
+				C15C9B871D7588E400CD8225 /* FMIblt.m in Sources */,
+				C15C9B2F1D75590100CD8225 /* utilstrencodings.cpp in Sources */,
 				C1133C091D6D521800D6370F /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
